@@ -15,10 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+
             TypesTableSeeder::class, //si inserisce prima il seeder riferito alla tabella indipendente
             ProjectsTableSeeder::class,
             TechnologiesTableSeeder::class,
             RoletableSeeder::class,
+            RoleUserTableSeeder::class,
             ProjectTechnologyTableSeeder::class
         ]);
     }
